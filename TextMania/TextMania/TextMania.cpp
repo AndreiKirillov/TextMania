@@ -3,7 +3,8 @@
 #include <chrono>
 #include <Windows.h>
 
-void ClearScreen()
+// Функция очищения консоли
+void clearConsole()
 {
 	HANDLE                     hStdOut;
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
@@ -47,7 +48,7 @@ int main(int argc, char* argv[])
 		std::cout << i << std::endl;
 	
 	std::this_thread::sleep_for(std::chrono::seconds(2));
-	ClearScreen();
+	clearConsole();
    	if (argc == 0)
 	{
 		// запуск обработчика окна 
